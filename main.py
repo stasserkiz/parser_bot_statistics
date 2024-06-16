@@ -5,6 +5,8 @@ from parser.job_parser import get_count_advertisement, save_to_db
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from config import driver_path
+
 
 import config
 from bot.handlers import dp
@@ -14,7 +16,7 @@ bot = Bot(token=config.BOT_TOKEN)
 async def main():
     chrome_options = Options()
     chrome_options.add_argument("--headless")  
-    service = Service(r"C:\Users\Стас\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe")
+    service = Service(driver_path)
     driver = webdriver.Chrome(service=service, options=chrome_options)
     
     try:
