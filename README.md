@@ -8,7 +8,9 @@
 
 pip install -r requirements.txt
 
-3.  Запустіть проект 
+3. Створіть файл .env та додайте всі змінні з env.sample та запишіть туди ваші ключі 
+
+4.  Запустіть проект 
 python main.py
 
 
